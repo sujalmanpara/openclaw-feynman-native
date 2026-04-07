@@ -2,21 +2,25 @@
 
 Use this file as the routing table. After choosing a workflow, read the dedicated file for the full execution contract.
 
-## Core workflows implemented
+## All workflows
 
+### Research workflows
 - **Deep Research** → `workflows/deepresearch.md`
 - **Literature Review** → `workflows/literature-review.md`
 - **Source Comparison** → `workflows/source-comparison.md`
 - **Peer Review** → `workflows/peer-review.md`
-- **Verification Loop** → `workflows/verification-loop.md`
 - **Paper-Code Audit** → `workflows/paper-code-audit.md`
 - **Draft Writing** → `workflows/draft-writing.md`
+- **Replication** → `workflows/replication.md`
+- **Autoresearch** → `workflows/autoresearch.md`
+- **Watch** → `workflows/watch.md`
+- **ELI5** → `workflows/eli5.md`
 
-## Planned next workflows
-
-- **Replication**
-- **Autoresearch**
-- **Watch**
+### Operational workflows
+- **Verification Loop** → `workflows/verification-loop.md`
+- **Session Log** → `workflows/session-log.md`
+- **Session Search** → `workflows/session-search.md`
+- **Jobs / Status** → `workflows/jobs.md`
 
 ## Shared artifact conventions
 

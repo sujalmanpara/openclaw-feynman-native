@@ -57,11 +57,13 @@ Non-goal for milestone 1:
 | audit | paper-vs-code audit workflow | core-ready | dedicated workflow added |
 | compare | grounded comparison matrix | core-ready | dedicated workflow + helper scripts added |
 | draft | paper-style or memo-style writeup from evidence | core-ready | dedicated workflow added |
-| replicate | replication planning + execution environments | skeleton | staged rollout |
-| autoresearch | iterative experiment loop | skeleton | depends on experiment logging + env support |
-| watch | recurring monitor with baseline + scheduled follow-up | skeleton | depends on scheduler/cron integration |
-| jobs | inspect running background work | gap | map to OpenClaw process/session status later |
-| log | durable session log | partial | map to notes/ + memory + optional changelog |
+| replicate | replication planning + execution environments | core-ready | dedicated workflow added |
+| autoresearch | iterative experiment loop | core-ready | dedicated workflow added |
+| watch | recurring monitor with baseline + scheduled follow-up | core-ready | dedicated workflow added |
+| jobs | inspect running background work | core-ready | mapped to OpenClaw process/session/cron tools |
+| log | durable session log | core-ready | dedicated workflow added |
+| eli5 | plain-English research explanation | core-ready | dedicated workflow added |
+| session-search | recover prior research context | core-ready | mapped to artifact + memory search |
 
 ---
 
@@ -136,6 +138,8 @@ Non-goal for milestone 1:
 - autoresearch loop
 - watch scheduling
 - jobs/status surface
+- ELI5, session log, session search
+- **Status:** all workflow references completed
 
 ### Milestone 5 — optional ecosystem parity
 - alpha adapter
@@ -172,4 +176,5 @@ The repo has been decomposed into:
 - artifact conventions
 
 This is enough to begin **native implementation without guessing**.
-The next coding phase should target **replication + autoresearch + watch flows**, then optional ecosystem adapters.
+**All Feynman workflows now have dedicated native references.**
+The next coding phase should target **optional ecosystem adapters** (Docker, Modal, RunPod, preview/export) and live end-to-end testing.

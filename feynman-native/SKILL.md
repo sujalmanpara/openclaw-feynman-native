@@ -17,7 +17,14 @@ Read `references/workflows.md` first, then load the dedicated workflow file:
 - **Review a draft, paper, memo, or benchmark writeup** → `references/workflows/peer-review.md`
 - **Check paper claims against code** → `references/workflows/paper-code-audit.md`
 - **Turn research into a polished draft** → `references/workflows/draft-writing.md`
+- **Replicate or reproduce a result** → `references/workflows/replication.md`
+- **Run an iterative experiment loop** → `references/workflows/autoresearch.md`
+- **Monitor a topic over time** → `references/workflows/watch.md`
+- **Explain something simply / ELI5** → `references/workflows/eli5.md`
 - **Any substantial draft that needs citations + stress testing** → `references/workflows/verification-loop.md`
+- **Log session progress** → `references/workflows/session-log.md`
+- **Recover prior research context** → `references/workflows/session-search.md`
+- **Check active background work** → `references/workflows/jobs.md`
 
 Read `references/tooling/paper-search.md` whenever academic paper discovery is central and exact alphaXiv parity is not available.
 Read `references/agents.md` before spawning role-based subagents.
@@ -76,14 +83,12 @@ Use these role definitions from `references/agents.md`:
 
 ## Current stage
 
-This skill now has the **core native workflow layer** for:
-- deep research
-- literature review
-- source comparison
-- peer review
+This skill now has **full workflow parity** with Feynman:
+- deep research, literature review, source comparison, peer review
+- paper-code audit, draft writing
+- replication, autoresearch, watch
+- ELI5, session log, session search, jobs/status
 - verification/provenance loop
-- paper-code audit
-- draft writing
 - native paper-search adapter path
 
-Next milestones should implement replication, autoresearch, and watch flows on top of this core.
+Next milestone should target optional ecosystem adapters (Docker polish, Modal, RunPod, preview/export).
