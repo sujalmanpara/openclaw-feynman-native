@@ -10,6 +10,7 @@ Use these roles as internal operating modes for OpenClaw subagents or structured
 - Distinguish observation, inference, and uncertainty.
 - Write durable artifacts to disk instead of holding everything in context.
 - Return lightweight summaries to the parent; keep full findings in files.
+- Never say `verified`, `confirmed`, or `reproduced` unless the evidence is explicitly recorded.
 
 ---
 
@@ -23,6 +24,7 @@ Use these roles as internal operating modes for OpenClaw subagents or structured
 - Cite findings inline with numeric source IDs.
 - Mark source quality and confidence honestly.
 - Explicitly label blocked or unresolved questions.
+- Avoid bringing back giant raw excerpts when a compact evidence note will do.
 
 ### Output contract
 - Minimum:
@@ -45,6 +47,7 @@ Use these roles as internal operating modes for OpenClaw subagents or structured
 - Avoid polishing beyond the evidence.
 - Organize by question, theme, or claim cluster.
 - Keep the draft ready for later citation and review passes.
+- Sweep strong claims before handing off to verification.
 
 ### Output contract
 - Draft only.
@@ -65,11 +68,18 @@ Use these roles as internal operating modes for OpenClaw subagents or structured
 - Deduplicate and renumber sources consistently.
 - Remove or weaken unsupported claims.
 - Build the final `Sources` section.
+- Check meaning, not just topic overlap.
+- Treat code-backed numbers, benchmarks, and computed claims as higher-risk: if the raw support is unclear, weaken or remove the claim.
+- Reject polished summaries that outrun the evidence.
+
+### Exit checklist
+- no orphan citations
+- no orphan sources
+- no unsupported critical numbers
+- no dead links left in the final artifact without explicit note
 
 ### Output contract
 - Complete final document with citations.
-- No orphan citations.
-- No orphan sources.
 - Default output path pattern:
   - `outputs/<slug>.md`
 
@@ -85,6 +95,9 @@ Use these roles as internal operating modes for OpenClaw subagents or structured
 - Look for weak baselines, missing ablations, or reproducibility risks where relevant.
 - Continue searching after the first issue.
 - Separate fatal, major, and minor issues.
+- Quote exact passages when criticizing a written artifact.
+- Look specifically for zombie paragraphs, stale summaries, and claims that survived earlier drafts without evidence.
+- Treat suspiciously clean results as suspect until traceable.
 
 ### Output contract
 - Structured review

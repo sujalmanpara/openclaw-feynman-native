@@ -15,9 +15,11 @@ Read `references/workflows.md` first, then load the dedicated workflow file:
 - **Lit review / state of the art / paper survey** → `references/workflows/literature-review.md`
 - **Compare tools, papers, approaches, or claims** → `references/workflows/source-comparison.md`
 - **Review a draft, paper, memo, or benchmark writeup** → `references/workflows/peer-review.md`
+- **Check paper claims against code** → `references/workflows/paper-code-audit.md`
+- **Turn research into a polished draft** → `references/workflows/draft-writing.md`
 - **Any substantial draft that needs citations + stress testing** → `references/workflows/verification-loop.md`
 
-For later milestones, use the parity matrix to see what remains to be implemented.
+Read `references/tooling/paper-search.md` whenever academic paper discovery is central and exact alphaXiv parity is not available.
 Read `references/agents.md` before spawning role-based subagents.
 Read `references/parity-matrix.md` when extending the skill, checking what still lacks parity, or deciding whether a Feynman-specific feature needs an adapter.
 
@@ -70,6 +72,7 @@ Use these role definitions from `references/agents.md`:
 - `scripts/merge_sources.py` — deduplicate URLs across research files into a unified source inventory
 - `scripts/verify_urls.py` — check URL liveness for draft/research files
 - `scripts/build_provenance.py` — generate a provenance sidecar for the final artifact
+- `scripts/paper_search.py` — arXiv-first paper discovery helper for native paper search
 
 ## Current stage
 
@@ -79,5 +82,8 @@ This skill now has the **core native workflow layer** for:
 - source comparison
 - peer review
 - verification/provenance loop
+- paper-code audit
+- draft writing
+- native paper-search adapter path
 
-Next milestones should implement paper-code audit, draft writing, replication, autoresearch, and watch flows on top of this core.
+Next milestones should implement replication, autoresearch, and watch flows on top of this core.

@@ -54,9 +54,9 @@ Non-goal for milestone 1:
 | deepresearch | plan-first orchestration with researcher/verifier/reviewer passes | core-ready | dedicated workflow + helper scripts added |
 | lit | literature review flow with paper-first evidence | core-ready | dedicated workflow + helper scripts added |
 | review | adversarial review / verification pass | core-ready | dedicated workflow + helper scripts added |
-| audit | paper-vs-code audit workflow | skeleton | next milestone |
+| audit | paper-vs-code audit workflow | core-ready | dedicated workflow added |
 | compare | grounded comparison matrix | core-ready | dedicated workflow + helper scripts added |
-| draft | paper-style or memo-style writeup from evidence | skeleton | next milestone |
+| draft | paper-style or memo-style writeup from evidence | core-ready | dedicated workflow added |
 | replicate | replication planning + execution environments | skeleton | staged rollout |
 | autoresearch | iterative experiment loop | skeleton | depends on experiment logging + env support |
 | watch | recurring monitor with baseline + scheduled follow-up | skeleton | depends on scheduler/cron integration |
@@ -80,7 +80,7 @@ Non-goal for milestone 1:
 
 | Feynman dependency | Native plan | Status | Gap handling |
 |---|---|---:|---|
-| alpha CLI / alphaXiv | native paper search + arXiv/official repo search + optional adapter | gap | exact parity requires adapter or alternative paper-search implementation |
+| alpha CLI / alphaXiv | native paper search + arXiv/official repo search + optional adapter | partial | `paper_search.py` + adapter strategy documented; exact alpha parity still optional |
 | web search | OpenClaw `web_search` + `web_fetch` | strong | available now |
 | session search | search prior outputs/notes + memory facilities | partial | implement helper/index later |
 | Docker | OpenClaw exec + local Docker if installed | partial | environment-dependent |
@@ -129,6 +129,7 @@ Non-goal for milestone 1:
 - implement draft workflow
 - harden verification rules
 - add optional paper-search adapter path
+- **Status:** core milestone completed for audit/draft/adapter scaffolding
 
 ### Milestone 4 — advanced parity
 - replication planning + at least one execution mode
@@ -171,4 +172,4 @@ The repo has been decomposed into:
 - artifact conventions
 
 This is enough to begin **native implementation without guessing**.
-The next coding phase should target **deepresearch + literature review + verifier/reviewer loop** first.
+The next coding phase should target **replication + autoresearch + watch flows**, then optional ecosystem adapters.
