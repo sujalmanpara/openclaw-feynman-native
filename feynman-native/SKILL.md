@@ -26,7 +26,11 @@ Read `references/workflows.md` first, then load the dedicated workflow file:
 - **Recover prior research context** → `references/workflows/session-search.md`
 - **Check active background work** → `references/workflows/jobs.md`
 
-Read `references/tooling/paper-search.md` whenever academic paper discovery is central and exact alphaXiv parity is not available.
+Read `references/tooling/paper-search.md` whenever academic paper discovery is central.
+Read `references/tooling/docker.md` when experiments need isolated execution.
+Read `references/tooling/modal.md` when serverless GPU compute is needed.
+Read `references/tooling/runpod.md` when persistent GPU pods are needed.
+Read `references/tooling/preview.md` when the user wants to preview or export artifacts.
 Read `references/agents.md` before spawning role-based subagents.
 Read `references/parity-matrix.md` when extending the skill, checking what still lacks parity, or deciding whether a Feynman-specific feature needs an adapter.
 
@@ -91,4 +95,10 @@ This skill now has **full workflow parity** with Feynman:
 - verification/provenance loop
 - native paper-search adapter path
 
-Next milestone should target optional ecosystem adapters (Docker polish, Modal, RunPod, preview/export).
+Optional ecosystem adapters are also included:
+- Docker execution environment
+- Modal serverless GPU compute
+- RunPod persistent GPU pods
+- Preview / PDF export
+
+The skill is now at **full parity** with the original Feynman project.

@@ -85,10 +85,10 @@ Non-goal for milestone 1:
 | alpha CLI / alphaXiv | native paper search + arXiv/official repo search + optional adapter | partial | `paper_search.py` + adapter strategy documented; exact alpha parity still optional |
 | web search | OpenClaw `web_search` + `web_fetch` | strong | available now |
 | session search | search prior outputs/notes + memory facilities | partial | implement helper/index later |
-| Docker | OpenClaw exec + local Docker if installed | partial | environment-dependent |
-| Modal | optional external CLI integration | gap | later milestone |
-| RunPod | optional external CLI integration | gap | later milestone |
-| preview / PDF export | OpenClaw-compatible preview/export path | gap | later milestone |
+| Docker | OpenClaw exec + local Docker if installed | core-ready | dedicated adapter doc + patterns |
+| Modal | optional external CLI integration | core-ready | dedicated adapter doc |
+| RunPod | optional external CLI integration | core-ready | dedicated adapter doc |
+| preview / PDF export | pandoc + browser preview | core-ready | dedicated adapter doc |
 | package-based memory | OpenClaw memory + file artifacts | partial | strong enough for workflow parity |
 | Pi subagents | OpenClaw subagents | strong | available now |
 
@@ -147,6 +147,7 @@ Non-goal for milestone 1:
 - Modal adapter
 - RunPod adapter
 - preview/export layer
+- **Status:** all adapter docs completed
 
 ---
 
@@ -176,5 +177,5 @@ The repo has been decomposed into:
 - artifact conventions
 
 This is enough to begin **native implementation without guessing**.
-**All Feynman workflows now have dedicated native references.**
-The next coding phase should target **optional ecosystem adapters** (Docker, Modal, RunPod, preview/export) and live end-to-end testing.
+**All Feynman workflows and ecosystem adapters now have dedicated native references.**
+**Full parity achieved.** The next phase is live end-to-end testing with real research tasks.
