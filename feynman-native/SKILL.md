@@ -1,0 +1,83 @@
+---
+name: feynman-native
+description: Native OpenClaw research system modeled after Feynman. Use when the user asks for deep research, literature reviews, paper surveys, source comparisons, peer review, paper-vs-code audits, research drafts, replication plans, autonomous experiment loops, or recurring research watches with citations and provenance.
+---
+
+# Feynman Native
+
+Build source-grounded research artifacts inside OpenClaw with plan-first execution, explicit verification, durable outputs, and role-based subagent orchestration.
+
+## Quick routing
+
+Read `references/workflows.md` first, then load the dedicated workflow file:
+
+- **Deep research / comprehensive analysis / in-depth report** → `references/workflows/deepresearch.md`
+- **Lit review / state of the art / paper survey** → `references/workflows/literature-review.md`
+- **Compare tools, papers, approaches, or claims** → `references/workflows/source-comparison.md`
+- **Review a draft, paper, memo, or benchmark writeup** → `references/workflows/peer-review.md`
+- **Any substantial draft that needs citations + stress testing** → `references/workflows/verification-loop.md`
+
+For later milestones, use the parity matrix to see what remains to be implemented.
+Read `references/agents.md` before spawning role-based subagents.
+Read `references/parity-matrix.md` when extending the skill, checking what still lacks parity, or deciding whether a Feynman-specific feature needs an adapter.
+
+## Operating contract
+
+- Start with a **plan artifact** for any non-trivial research job.
+- Use one **canonical final Markdown artifact** per user-facing job.
+- Save durable artifacts under:
+  - `outputs/` for research briefs, reviews, comparisons, audits, and summaries
+  - `papers/` for paper-style drafts
+  - `experiments/` for runnable experiments and logs
+  - `notes/` for scratch notes and intermediate synthesis
+  - `outputs/.plans/` for plan files
+  - `outputs/.drafts/` for pre-citation drafts
+- Produce a provenance sidecar next to the final artifact.
+- Prefer direct URLs for every source. Never cite a source you did not inspect closely enough to support the claim.
+- Never say `verified`, `confirmed`, or `reproduced` unless the check actually happened and the evidence is recorded.
+- For current topics, use web sources first. For academic topics, use paper search first. For mixed topics, use both.
+- Use subagents only when decomposition reduces context pressure or meaningfully improves coverage.
+
+## Default execution pattern
+
+1. Derive a short slug using `scripts/make_slug.py`.
+2. Initialize output scaffolding with `scripts/init_artifact.py` when helpful.
+3. Write a plan with:
+   - key questions
+   - evidence types needed
+   - acceptance criteria
+   - task ledger
+   - verification log
+4. Present the plan and get confirmation before major work.
+5. Gather evidence directly or with `researcher` subagents.
+6. Synthesize into a draft yourself unless a workflow explicitly benefits from the `writer` role.
+7. Run `verifier` and `reviewer` passes before delivery when the artifact is substantial.
+8. Save the final artifact plus provenance.
+
+## Role model
+
+Use these role definitions from `references/agents.md`:
+
+- **researcher** — gather evidence across web, papers, docs, repos, and local artifacts
+- **writer** — turn evidence into a readable draft without outrunning the sources
+- **verifier** — add citations, verify URLs, and remove unsupported claims
+- **reviewer** — adversarially pressure-test logic, rigor, and confidence
+
+## Helper scripts
+
+- `scripts/make_slug.py` — normalize a topic into a short slug
+- `scripts/init_artifact.py` — create standard folders and a starter plan file
+- `scripts/merge_sources.py` — deduplicate URLs across research files into a unified source inventory
+- `scripts/verify_urls.py` — check URL liveness for draft/research files
+- `scripts/build_provenance.py` — generate a provenance sidecar for the final artifact
+
+## Current stage
+
+This skill now has the **core native workflow layer** for:
+- deep research
+- literature review
+- source comparison
+- peer review
+- verification/provenance loop
+
+Next milestones should implement paper-code audit, draft writing, replication, autoresearch, and watch flows on top of this core.
